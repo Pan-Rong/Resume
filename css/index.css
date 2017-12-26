@@ -1,0 +1,121 @@
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.navbar{
+    padding:5px;
+    background:rgba(0,0,0,0);
+    border:0;
+}
+.navbar .navbar-header .githubavator img{
+    width:40px;
+    height:40px;
+    border-radius:20px;
+}
+.navbar #navbarlist{
+    float:right;/*设置下拉框右对齐*/
+}
+.navbar #navbarlist #menu li a{
+    font-size:16px;
+    font-family:"微软雅黑";
+}
+#fullpageshow .intro{
+    margin:50px auto 20px auto;
+    width:80%;
+} 
+#fullpageshow .intro .avator img{
+    width:150px;
+    height:150px;
+    border-radius:100px;
+}
+#fullpageshow .intro .text{
+    margin-top:50px;
+    font-size:26px;
+}
+#fullpageshow .eduintro .introlist{
+    height:130px;
+}
+#fullpageshow p,#fullpageshow p{
+    font-size:18px;
+}
+
+#fullpageshow .eduintro .edubg,#fullpageshow .eduintro .age,#fullpageshow .eduintro .state,#fullpageshow .eduintro .location{
+    position:absolute;
+    opacity:0;
+    transition:all 1s;
+}
+#fullpageshow .eduintro .edubg,#fullpageshow .eduintro .age{
+    margin-left:-200px;
+}
+#fullpageshow .eduintro .state,#fullpageshow .eduintro .location{
+    margin-left:120%;
+}
+#fullpageshow .active .edubg,#fullpageshow .active .age,#fullpageshow .active .state,#fullpageshow .eduintro .location{
+    opacity:1;
+    transition-delay:1s;
+}
+#fullpageshow .active .edubg{
+    margin-left:70%;  
+}
+#fullpageshow .active .age{
+    margin-left:50%;
+}
+#fullpageshow .active .state{
+    margin-left:10%;
+}
+#fullpageshow .active .location{ 
+    margin-left:30%;
+}
+#fullpageshow .eduintro .honor{
+    font-size:18px;
+    margin:60px auto 0px auto;
+    width:60%;
+    text-align:left;
+}
+#fullpageshow .eduintro .honor div{
+    margin-top:10px;
+    opacity:0;
+    transition:all 1s;
+}
+#fullpageshow .active .honor div{
+    opacity:1;
+    width:auto;
+    height:auto;
+    transition-delay:1s;
+}
+#fullpageshow .slide img{
+    width:400px;
+    height:300px;
+    border-radius:10px;
+    margin:auto;
+}
+#fullpageshow .slide .brief{
+    margin:auto;
+    width:650px;
+    height:150px;
+    background:rgba(255,255,255,0.1);
+    border-radius:10px;
+}
+#fullpageshow .slide .brief h3{
+    padding-top:10px;
+    color:#ebc3eb;
+}
+#fullpageshow .icons a{
+    color:#ffffff;
+}
+#fullpageshow .icons i{
+    font-size:32px;
+    width:55px;
+    height:54px;
+    padding-top:9px;
+    border:#ffffff solid 2px;
+    border-radius:27px;
+}
+#fullpageshow .icons i:hover{
+    color:#70cfaf;
+    background:#ffffff;
+}
+.angledown{
+    position:absolute;
+    margin-left:50%;
+    color:#ffffff;
+    bottom:0px;
+    font-size:26px;
+}
