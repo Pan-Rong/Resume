@@ -18,19 +18,21 @@
 }
 .frm .textcontent{
     background:#ffffff;
-    width:60%;
+    width:80%;
 }
 .frm .textcontent .textshow{
     margin-bottom:20px;
 }
 .frm .textcontent .textshow blockquote{
+    text-align:left;
     font-size:20px;
 }
 .frm .textcontent .textshow small{
     text-align:right;
+    opacity:0.5;
 }
 .row{
-    padding:0 30px;
+    padding:0 20px;
 }
 .row .iconclass{
     border:0px;
@@ -50,4 +52,12 @@
 }
 a:hover{
     cursor:pointer;
+}
+@media screen and (max-width:500px){
+    .frm .textcontent .textshow blockquote{
+        font-size:14px;
+    }
+    .frm .textcontent .textshow blockquote small{
+        opacity:0.5;
+    }
 }

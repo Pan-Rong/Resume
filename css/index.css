@@ -1,4 +1,4 @@
-.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.section { text-align: center;font-size:50px;color: #fff;}
 .navbar{
     padding:5px;
     background:rgba(0,0,0,0);
@@ -23,7 +23,7 @@
 #fullpageshow .intro .avator img{
     width:150px;
     height:150px;
-    border-radius:100px;
+    border-radius:75px;
 }
 #fullpageshow .intro .text{
     margin-top:50px;
@@ -65,8 +65,8 @@
 }
 #fullpageshow .eduintro .honor{
     font-size:18px;
-    margin:60px auto 0px auto;
-    width:60%;
+    margin:50px auto 0px auto;
+    width:70%;
     text-align:left;
 }
 #fullpageshow .eduintro .honor div{
@@ -118,4 +118,65 @@
     color:#ffffff;
     bottom:0px;
     font-size:26px;
+}
+@media screen and (max-width:500px) {
+    .section { font-size:30px;}
+    .navbar .navbar-header .githubavator img{
+        margin-top:-10px;
+        width:36px;
+        height:36px;
+        border-radius:18px;
+    }
+    .navbar #navbarlist #menu li a{
+        font-size:12px;
+        font-family:"微软雅黑";
+    }
+ 
+    #fullpageshow .intro .avator img{
+        width:100px;
+        height:100px;
+        border-radius:50px;
+    }
+    #fullpageshow .intro .text{
+        margin-top:30px;
+        font-size:18px;
+    }
+    #fullpageshow .eduintro .edubg,#fullpageshow .eduintro .age,#fullpageshow .eduintro .state,#fullpageshow .eduintro .location{
+      margin-top:15px;
+    }
+    #fullpageshow .eduintro .introlist{
+        height:80px;
+    }
+    #fullpageshow p,#fullpageshow p{
+        font-size:12px;
+    }
+    #fullpageshow .eduintro .honor{
+        font-size:12px;
+    }
+    #fullpageshow .slide img{
+        margin-top:55px;
+        width:200px;
+        height:160px;
+    }
+    #fullpageshow .slide .brief{
+        width:280px;
+        height:130px;
+    }
+    #fullpageshow .icons i{
+        font-size:24px;
+        width:40px;
+        height:40px;
+        padding-top:5px;
+        border:#ffffff solid 2px;
+        border-radius:20px;
+    }
+    .angledown{
+        font-size:18px;
+    }
+    h3{
+        font-size:18px;
+    }
+    h4{
+        font-size:16px;
+    }
 }
