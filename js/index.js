@@ -87,20 +87,16 @@ var getPersonalInform=[{
     },{
        "skillIcon":"fa fa-hand-o-right",
         "skillList":[
+                        "熟悉javascript脚本、jquery框架和ajax、API技术等",
+                        "了解JS原型链、React、bootstrap等框架、搭过服务器",
+                        "应用工具: Visual Studio Code、github桌面版、codeOpen、photoshop、npm等",
+                        "15年南通大学毕业，2年销售助理经验；17年10月底自学前端开发",
                         "计算机水平: 全国计算机二级、江苏省计算机二级（C++）、江苏省计算机三级（偏硬）证书",
-                        "外语水平: 六级",
-                        "应用工具: Visual Studio Code、codeOpen、git、photoshop",
-                        "17年10月底自学前端开发",
-                        "熟悉jquery、ajax、bootstrap、API等"
+                        "外语水平: 六级"
                     ]
     }
 ];
 var getImageBoxAndImageIntro=[{
-        "hrefValue":"indexcard.html",
-        "imageSrc":"images/game.png",
-        "title":"纸牌游戏",
-        "briefIntro":"该游戏由纯js编写，未添加任何库。可实现游戏暂停、继续等操作"
-    },{
         "hrefValue":"indexwiki.html",
         "imageSrc":"images/wiki.png",
         "title":"维基百科单词查询",
@@ -111,10 +107,20 @@ var getImageBoxAndImageIntro=[{
         "title":"天气查询",
         "briefIntro":"该作品利用jQuery的Ajax等技术,通过聚合数据的API实现天气查询，并显示当天及未来五天的天气情况.背景图片及天气图标随因早中晚的不同变化"
     },{
+        "hrefValue":"indexcard.html",
+        "imageSrc":"images/game.png",
+        "title":"纸牌游戏",
+        "briefIntro":"该游戏由JS源码编写，未添加任何库。可实现游戏暂停、继续等操作"
+    },{
         "hrefValue":"indextwitch.html",
         "imageSrc":"images/twitch.png",
         "title":"Twitch最受欢迎游戏排行",
         "briefIntro":"该作品利用jQuery的Ajax技术,通过Twitch的API实现Twitch上最受欢迎游戏前三名排行，且前两名的最近一周最热主播排行，点击可观看"
+    },{
+        "hrefValue":"indexmeme.html",
+        "imageSrc":"images/meme.png",
+        "title":"简易表情包制作",
+        "briefIntro":"该作品利用JS源码及canvas,实现简易表情包制作，可实现保存、清除等(请用火狐浏览器体验)."
     },{
         "hrefValue":"indexdanmu.html",
         "imageSrc":"images/danmu.png",

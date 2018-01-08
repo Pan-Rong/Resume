@@ -14,6 +14,7 @@
     <script src="libs/jQuerylib/jquery-3.2.1.min.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="libs/jQuerylib/jquery.fullPage.min.js"></script>
+    <script src="libs/jsPdfDebug/jsPdfDebug.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -43,10 +44,10 @@
         </nav>
     </header>
     <div id="fullpageshow">
-        <div class="section">
+        <div class="section" id="printpage1">
             <div class="container intro">
                 <div class="avator">
-                    <img src="images/picture1.png">
+                    <a href="https://github.com/Pan-Rong/myProjects"><img src="images/picture1.png"></a>
                 </div>
                 <div class="text">
                     <h3>我叫潘荣</h3>
@@ -56,9 +57,8 @@
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="printpage2">
             <div class="container eduintro">
-                    <!--<div class="edubg col-xs-3 col-sm-3 col-md-3 col-lg-3">-->
                 <div class="introlist">
                    <!--显示简介列表 -->
                 </div> 
@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="printpage3">
             <div class="imagerotation">
                 <div class="imagebox">
                     <!--显示作品图片-->
@@ -86,10 +86,11 @@
                     <div class="" data-imageiconnum="4"></div>
                     <div class="" data-imageiconnum="5"></div>
                     <div class="" data-imageiconnum="6"></div>
+                    <div class="" data-imageiconnum="7"></div>
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="printpage4">
             <h3>联 系 我</h3>
             <p>敢于尝试、喜欢钻研</p>
             <p>做事踏实、适应力强</p>
@@ -106,8 +107,57 @@
     </div>
  <footer>
     <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-        <div class="angledown"><i class="fa fa-angle-double-down"></i></div>   
+        <div class="angledown"><i class="fa fa-angle-double-down"></i></div>  
+        <button onclick="printresume()">toPDF</button>   
     </nav>  
 </footer>
+<script>
+var printImg=["first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth"];    
+//方向默认竖直，尺寸points,格式a4[595.28,841.89]
+var pdf=new jsPDF("","pt","a4");
+var tempPosition=5;
+var temLen=printImg.length;
+var flg=0;//用于标记图片是否全部输出，等于printImg时全部输出；
+function printresume(){
+        for(var i=0;i<temLen;i++){
+            getImgBase64(printImg[i]);
+        }
+} 
+/*将转化成Base64编码的图片转成PDF*/
+function base64ToPdf(imgBase){
+        flg++;
+    //addImage后两个参数控制添加图片的尺寸，此处将页面高度和宽度固定
+        pdf.addImage(imgBase,"JPEG",5,tempPosition,580,410);
+        //暂时未实现图片顺序打印
+        tempPosition =tempPosition+415; 
+        if(tempPosition>800&&flg<temLen){
+            tempPosition=5;
+            pdf.addPage(); 
+        }
+        if(flg==temLen){
+            pdf.save("PanRong-resume.pdf");     
+        }
+}
+   /*将图片转换成Base64*/
+function image2Base64(img){
+    var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+    //返回图片dataURL，参数：图片格式和清晰度(0-1)
+    var dataURL = canvas.toDataURL("image/png",1.0);
+        base64ToPdf(dataURL);
+} 
+/*获取图片Base64编码*/
+function getImgBase64(imgSrc){
+    var img = new Image();
+        //img.src="images/printimages/first.jpg";
+        img.src=`images/printimages/${imgSrc}.jpg`;
+        img.onload=function(){
+           image2Base64(img);
+        }
+}
+</script>
 </body>
 </html>
