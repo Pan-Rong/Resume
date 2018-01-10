@@ -90,7 +90,7 @@ var getPersonalInform=[{
                         "熟悉javascript脚本、jquery框架和ajax、API技术等",
                         "了解JS原型链、React、bootstrap等框架、用IIS搭过网站",
                         "应用工具: Visual Studio Code、github桌面版、codeOpen、photoshop、npm等",
-                        "15年南通大学毕业，2年销售助理经验；17年10月底自学前端开发",
+                        "15年南通大学毕业，2年销售助理经验；17年10月自学前端开发",
                         "计算机水平: 全国计算机二级、江苏省计算机二级（C++）、江苏省计算机三级（偏硬）证书",
                         "外语水平: 六级"
                     ]
